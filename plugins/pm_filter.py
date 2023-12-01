@@ -204,9 +204,6 @@ async def next_page(bot, query):
         else:
             off_set = offset - 10
         if n_offset == 0:
-            btn.append([
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#files#{offset}#{req}")
-    ])
             btn.append(
                 [InlineKeyboardButton("⌫ 𝐁𝐀𝐂𝐊", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages")]
             )
@@ -220,6 +217,9 @@ async def next_page(bot, query):
                     InlineKeyboardButton("𝐍𝐄𝐗𝐓 ➪", callback_data=f"next_{req}_{key}_{n_offset}")
                 ],
             )
+    btn.append([
+        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#files#{offset}#{req}")
+    ])
     btn.insert(0, [
         InlineKeyboardButton("Join Channel", url=f"https://t.me/The_Happy_Hours")
     ])
@@ -286,9 +286,6 @@ async def language_check(bot, query):
                 for file in files
             ]
         else:
-            btn.append([
-            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{userid}")
-        ])
             btn = [
                 [
                     InlineKeyboardButton(
@@ -302,6 +299,10 @@ async def language_check(bot, query):
                 ]
                 for file in files
             ]
+        
+        btn.append([
+            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{userid}")
+        ])
 
         btn.insert(0, [
             InlineKeyboardButton("Join Channel", url=f"https://t.me/The_Happy_Hours")
@@ -1523,9 +1524,6 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
     else:
-        btn.append([
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{message.from_user.id}")
-    ])
         btn = [
             [
                 InlineKeyboardButton(
@@ -1539,6 +1537,10 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
+        
+    btn.append([
+        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{message.from_user.id}")
+    ])
 
     btn.insert(0, [
         InlineKeyboardButton("Join Channel", url=f"https://t.me/The_Happy_Hours")
