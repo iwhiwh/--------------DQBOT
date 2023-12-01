@@ -153,31 +153,6 @@ async def next_page(bot, query):
             for file in files
         ]
     try:
-        if settings['auto_delete']:
-            btn.insert(0, 
-                [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
-                ]
-            )
-        else:
-            btn.insert(0, 
-                [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
-                ]
-            )            
-    except KeyError:
-        await save_group_settings(query.message.chat.id, 'auto_delete', True)
-        btn.insert(0, 
-            [
-                InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
-            ]
-        )
-    try:
         if settings['max_btn']:
             if 0 < offset <= 10:
                 off_set = 0
@@ -243,11 +218,10 @@ async def next_page(bot, query):
                 ],
             )
     btn.insert(0, [
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#files#{offset}#{req}"),
-        InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{req}")
+        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#files#{offset}#{req}")
     ])
     btn.insert(0, [
-        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton("Join Channel", url=f"https://t.me/The_Happy_Hours")
     ])
     try:
         await query.edit_message_reply_markup(
@@ -325,42 +299,13 @@ async def language_check(bot, query):
                 ]
                 for file in files
             ]
-
-        try:
-            if settings['auto_delete']:
-                btn.insert(0, 
-                    [
-                        InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                        InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                        InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
-                    ]
-                )
-
-            else:
-                btn.insert(0, 
-                    [
-                        InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                        InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
-                    ]
-                )
-                    
-        except KeyError:
-            await save_group_settings(query.message.chat.id, 'auto_delete', True)
-            btn.insert(0, 
-                [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
-                ]
-            )
         
         btn.insert(0, [
-            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{userid}"),
-            InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{userid}")
+            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{userid}")
         ])
 
         btn.insert(0, [
-            InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
+            InlineKeyboardButton("Join Channel", url=f"https://t.me/The_Happy_Hours")
         ])
 
         if offset != "":
@@ -1592,39 +1537,13 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
-    try:
-        if settings['auto_delete']:
-            btn.insert(0, 
-                [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
-                ]
-            )
-        else:
-            btn.insert(0, 
-                [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
-                ]
-            )       
-    except KeyError:
-        await save_group_settings(message.chat.id, 'auto_delete', True)
-        btn.insert(0, 
-            [
-                InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
-            ]
-        )
-
+        
     btn.insert(0, [
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{message.from_user.id}"),
-        InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{message.from_user.id}")
+        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{message.from_user.id}")
     ])
 
     btn.insert(0, [
-        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton("Join Channel", url=f"https://t.me/The_Happy_Hours")
     ])
 
     if offset != "":
