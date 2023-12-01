@@ -217,7 +217,7 @@ async def next_page(bot, query):
                     InlineKeyboardButton("𝐍𝐄𝐗𝐓 ➪", callback_data=f"next_{req}_{key}_{n_offset}")
                 ],
             )
-    btn.insert(0, [
+    btn.append([
         InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#files#{offset}#{req}")
     ])
     btn.insert(0, [
@@ -300,7 +300,7 @@ async def language_check(bot, query):
                 for file in files
             ]
         
-        btn.insert(0, [
+        btn.append([
             InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{userid}")
         ])
 
@@ -1538,7 +1538,7 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
         
-    btn.insert(0, [
+    btn.append([
         InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{message.from_user.id}")
     ])
 
