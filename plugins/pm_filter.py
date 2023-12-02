@@ -245,7 +245,7 @@ async def next_page(bot, query):
         InlineKeyboardButton("𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀", callback_data=f"send_fall#files#{offset}#{req}")
     ])
     btn.insert(0, [
-        InlineKeyboardButton("Join Channel", url=f"https://t.me/The_Happy_Hours")
+        InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪꜰʏ", url=f"https://t.me/The_Happy_Hour_Hindi/1393")
     ])
     try:
         await query.edit_message_reply_markup(
@@ -325,7 +325,7 @@ async def language_check(bot, query):
             ]
 
         btn.insert(0, [
-            InlineKeyboardButton("Join Channel", url=f"https://t.me/The_Happy_Hours")
+            InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪꜰʏ", url=f"https://t.me/The_Happy_Hour_Hindi/1393")
         ])
 
         if offset != "":
@@ -1564,7 +1564,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
 
     btn.insert(0, [
-        InlineKeyboardButton("Join Channel", url=f"https://t.me/The_Happy_Hours")
+        InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪꜰʏ", url=f"https://t.me/The_Happy_Hour_Hindi/1393")
     ])
 
     if offset != "":
