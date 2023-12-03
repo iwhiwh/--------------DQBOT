@@ -279,7 +279,7 @@ async def start(client, message):
                     InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
                 ]]
                 await message.reply_text(
-                    text="<b>15 सेकंड का वेरिफिकेशन जरूरी हे !\n\nPlease Complete Verification !!!\n\nAfter Get Unlimited Movies...</b>",
+                    text="<b>हर दो दिन में 15 सेकंड का वेरिफिकेशन जरूरी हे !\n\nPlease Complete Verification !!!\n\nAfter Get Unlimited Movies...</b>",
                     protect_content=True if PROTECT_CONTENT else False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -330,7 +330,7 @@ async def start(client, message):
             InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
         ]]
         await message.reply_text(
-            text="<b>15 सेकंड का वेरिफिकेशन जरूरी हे !\n\nPlease Complete Verification !!!\n\nAfter Get Unlimited Movies...</b>",
+            text="<b>हर दो दिन में 15 सेकंड का वेरिफिकेशन जरूरी हे !\n\nPlease Complete Verification !!!\n\nAfter Get Unlimited Movies...</b>",
             protect_content=True if PROTECT_CONTENT else False,
             reply_markup=InlineKeyboardMarkup(btn)
         )
