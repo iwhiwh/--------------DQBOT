@@ -1629,7 +1629,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>{message.from_user.mention} Result Available for {search}</b>"
+        cap = f"<b>{message.from_user.mention} ʏᴏᴜʀ ʀᴇꜱᴜʟᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ꜰᴏʀ : {search}</b>"
     fuk = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
     await message.delete()
     try:
